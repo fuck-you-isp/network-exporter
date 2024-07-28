@@ -28,13 +28,13 @@ http_get:
 targets:
   - name: google-dns1
     host: 8.8.8.8
-    type: TCP
+    type: ICMP
   - name: google-dns2
     host: 1.1.1.1
-    type: TCP
+    type: ICMP
   - name: Google-Meet
     host: lens.l.google.com
-    type: TCP
+    type: ICMP
   - name: google-http-get
-    host: https://google.com
+    host: http://google.com
     type: HTTPGet
