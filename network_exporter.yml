@@ -26,10 +26,10 @@ http_get:
 
 # Target list and settings
 targets:
-  - name: google-dns1
+  - name: google
     host: 8.8.8.8
     type: ICMP
-  - name: google-dns2
+  - name: cloudflare
     host: 1.1.1.1
     type: ICMP
   - name: Google-Meet
