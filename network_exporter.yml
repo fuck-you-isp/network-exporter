@@ -35,6 +35,39 @@ targets:
   - name: Google-Meet
     host: 172.217.206.127
     type: ICMP
+  - name: ZOOM-AUS
+    host: 202.177.213.97
+    type: ICMP
+  - name: ZOOM-CAN
+    host: 64.69.74.1
+    type: ICMP
+  - name: ZOOM-CHN
+    host: 52.81.151.129
+    type: ICMP
+  - name: ZOOM-DEU
+    host: 3.127.194.12
+    type: ICMP
+  - name: ZOOM-IND
+    host: 3.7.35.1
+    type: ICMP
+  - name: ZOOM-JPN
+    host: 52.197.97.21
+    type: ICMP
+  - name: ZOOM-USA-CAL
+    host: 160.1.56.129
+    type: ICMP
+  - name: ZOOM-USA-COL
+    host: 4.35.64.129
+    type: ICMP
+  - name: ZOOM-USA-LOU
+    host: 4.34.125.129
+    type: ICMP
+  - name: ZOOM-USA-VIR
+    host: 3.235.69.1
+    type: ICMP
+  - name: ZOOM-USA-WAS
+    host: 3.101.32.129
+    type: ICMP
   - name: google-http-get
     host: http://google.com
     type: HTTPGet
