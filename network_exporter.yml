@@ -33,7 +33,7 @@ targets:
     host: 1.1.1.1
     type: ICMP
   - name: Google-Meet
-    host: lens.l.google.com
+    host: 172.217.206.127
     type: ICMP
   - name: google-http-get
     host: http://google.com
