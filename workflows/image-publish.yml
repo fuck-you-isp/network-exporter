@@ -1,0 +1,12 @@
+
+name: "Build and Publish Container Image"
+
+on: [push]
+
+jobs:
+  build-and-publish-image:
+    uses: fuck-you-isp/.github/.github/workflows/image-publish.yml@main
+    secrets: inherit
+    permissions:
+      contents: read
+      packages: write
