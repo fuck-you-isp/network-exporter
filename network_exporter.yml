@@ -26,15 +26,6 @@ http_get:
 
 # Target list and settings
 targets:
-  - name: internal
-    host: 192.168.0.1
-    type: ICMP
-    probe:
-      - hostname1
-      - hostname2
-    labels:
-      dc: home
-      rack: a1
   - name: google-dns1
     host: 8.8.8.8
     type: TCP
