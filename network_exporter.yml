@@ -1,14 +1,12 @@
 # Main Config
 conf:
   refresh: 15m
-  nameserver: 1.1.1.1:53 # Optional
-  nameserver_timeout: 250ms # Optional
 
 # Specific Protocol settings
 icmp:
   interval: 3s
   timeout: 1s
-  count: 6
+  count: 1
 
 mtr:
   interval: 3s
@@ -26,48 +24,217 @@ http_get:
 
 # Target list and settings
 targets:
-  - name: google
+  - name: Google-Meet
+    host: lens.l.google.com
+    type: ICMP
+  - name: Microsoft-Teams
+    host: teams.microsoft.com
+    type: ICMP
+  - name: Slack-app
+    host: app.slack.com
+    type: ICMP
+  - name: Slack-api
+    host: edgeapi.slack.com
+    type: ICMP
+  - name: Discord
+    host: discord.gg
+    type: ICMP
+
+  # DNS
+  - name: google-dns
     host: 8.8.8.8
     type: ICMP
-  - name: cloudflare
+  - name: cloudflare-dns
     host: 1.1.1.1
     type: ICMP
-  - name: Google-Meet
-    host: 172.217.206.127
+  - name: quad9-dns
+    host: 9.9.9.9
     type: ICMP
-  - name: ZOOM-AUS
-    host: 202.177.213.97
+  - name: open-dns
+    host: 208.67.222.222
+    type: ICMP  
+
+# Developer Services
+  - name: dev-GHCR
+    host: pkg-containers.githubusercontent.com
+    type: ICMP  
+  - name: dev-GitHub
+    host: github.com
+    type: ICMP  
+
+  # "devtunnel clusters --ping" gets a list of everything below except for the global endpoint
+  - name: DevTunnel-Global
+    host: global.rel.tunnels.api.visualstudio.com
     type: ICMP
-  - name: ZOOM-CAN
-    host: 64.69.74.1
+  - name: DevTunnel-UkSouth
+    host: uks1.rel.tunnels.api.visualstudio.com
     type: ICMP
-  - name: ZOOM-CHN
-    host: 52.81.151.129
+  - name: DevTunnel-NorthEurope
+    host: eun1.rel.tunnels.api.visualstudio.com
     type: ICMP
-  - name: ZOOM-DEU
-    host: 3.127.194.12
+  - name: DevTunnel-WestEurope
+    host: euw.rel.tunnels.api.visualstudio.com
     type: ICMP
-  - name: ZOOM-IND
-    host: 3.7.35.1
+  - name: DevTunnel-EastUs
+    host: use.rel.tunnels.api.visualstudio.com
     type: ICMP
-  - name: ZOOM-JPN
-    host: 52.197.97.21
+  - name: DevTunnel-EastUs2
+    host: use2.rel.tunnels.api.visualstudio.com
     type: ICMP
-  - name: ZOOM-USA-CAL
-    host: 160.1.56.129
+  - name: DevTunnel-WestUs3
+    host: usw3.rel.tunnels.api.visualstudio.com
     type: ICMP
-  - name: ZOOM-USA-COL
-    host: 4.35.64.129
+  - name: DevTunnel-WestUs2
+    host: usw2.rel.tunnels.api.visualstudio.com
     type: ICMP
-  - name: ZOOM-USA-LOU
-    host: 4.34.125.129
+  - name: DevTunnel-SouthEastAsia
+    host: asse.rel.tunnels.api.visualstudio.com
     type: ICMP
-  - name: ZOOM-USA-VIR
-    host: 3.235.69.1
+  - name: DevTunnel-BrazilSouth
+    host: brs.rel.tunnels.api.visualstudio.com
     type: ICMP
-  - name: ZOOM-USA-WAS
-    host: 3.101.32.129
+  - name: DevTunnel-CentralIndia
+    host: inc1.rel.tunnels.api.visualstudio.com
     type: ICMP
-  - name: google-http-get
-    host: http://google.com
-    type: HTTPGet
+  - name: DevTunnel-AustraliaEast
+    host: aue.rel.tunnels.api.visualstudio.com
+    type: ICMP
+  - name: DevTunnel-AustraliaCentral
+    host: auc1.rel.tunnels.api.visualstudio.com
+    type: ICMP
+
+# hetzner: http://speed.hetzner.de/
+  - name: Hetzner-Falkenstein
+    host: fsn1-speed.hetzner.com
+    type: ICMP
+  - name: Hetzner-Nuremberg
+    host: nbg1-speed.hetzner.com
+    type: ICMP
+  - name: Hetzner-Helsinki
+    host: hel1-speed.hetzner.com
+    type: ICMP
+  - name: Hetzner-Ashburn
+    host: ash-speed.hetzner.com
+    type: ICMP
+  - name: Hetzner-Hillsboro
+    host: hil-speed.hetzner.com
+    type: ICMP
+  - name: Hetzner-Singapore
+    host: sin-speed.hetzner.com
+    type: ICMP
+
+# AWS
+  - name: AWS-us-east-1
+    host: s3.us-east-1.amazonaws.com
+    type: ICMP
+  - name: AWS-us-east-2
+    host: s3.us-east-2.amazonaws.com
+    type: ICMP
+  - name: AWS-us-west-1
+    host: s3.us-west-1.amazonaws.com
+    type: ICMP
+  - name: AWS-us-west-2
+    host: s3.us-west-2.amazonaws.com
+    type: ICMP
+  - name: AWS-eu-central-1
+    host: s3.eu-central-1.amazonaws.com
+    type: ICMP
+  - name: AWS-eu-west-1
+    host: s3.eu-west-1.amazonaws.com
+    type: ICMP
+  - name: AWS-eu-west-2
+    host: s3.eu-west-2.amazonaws.com
+    type: ICMP
+  - name: AWS-eu-south-1
+    host: s3.eu-south-1.amazonaws.com
+    type: ICMP
+  - name: AWS-eu-west-3
+    host: s3.eu-west-3.amazonaws.com
+    type: ICMP
+  - name: AWS-eu-south-2
+    host: s3.eu-south-2.amazonaws.com
+    type: ICMP
+  - name: AWS-eu-north-1
+    host: s3.eu-north-1.amazonaws.com
+    type: ICMP
+  - name: AWS-eu-central-2
+    host: s3.eu-central-2.amazonaws.com
+    type: ICMP
+
+  # Americas
+  - name: GCP-us-west1
+    host: storage.us-west1.rep.googleapis.com
+    type: ICMP
+  - name: GCP-us-west2
+    host: storage.us-west2.rep.googleapis.com
+    type: ICMP
+  - name: GCP-us-west3
+    host: storage.us-west3.rep.googleapis.com
+    type: ICMP
+  - name: GCP-us-west4
+    host: storage.us-west4.rep.googleapis.com
+    type: ICMP
+  - name: GCP-us-central1
+    host: storage.us-central1.rep.googleapis.com
+    type: ICMP
+  - name: GCP-us-east1
+    host: storage.us-east1.rep.googleapis.com
+    type: ICMP
+  - name: GCP-us-east4
+    host: storage.us-east4.rep.googleapis.com
+    type: ICMP
+  - name: GCP-us-east5
+    host: storage.us-east5.rep.googleapis.com
+    type: ICMP
+  - name: GCP-us-south1
+    host: storage.us-south1.rep.googleapis.com
+    type: ICMP
+  - name: GCP-northamerica-northeast1
+    host: storage.northamerica-northeast1.rep.googleapis.com
+    type: ICMP
+  - name: GCP-northamerica-northeast2
+    host: storage.northamerica-northeast2.rep.googleapis.com
+    type: ICMP
+  - name: GCP-southamerica-east1
+    host: storage.southamerica-east1.rep.googleapis.com
+    type: ICMP
+  - name: GCP-southamerica-west1
+    host: storage.southamerica-west1.rep.googleapis.com
+    type: ICMP
+  # Europe
+  - name: GCP-europe-west1
+    host: storage.europe-west1.rep.googleapis.com
+    type: ICMP
+  - name: GCP-europe-west2
+    host: storage.europe-west2.rep.googleapis.com
+    type: ICMP
+  - name: GCP-europe-west3
+    host: storage.europe-west3.rep.googleapis.com
+    type: ICMP
+  - name: GCP-europe-west4
+    host: storage.europe-west4.rep.googleapis.com
+    type: ICMP
+  - name: GCP-europe-west6
+    host: storage.europe-west6.rep.googleapis.com
+    type: ICMP
+  - name: GCP-europe-west8
+    host: storage.europe-west8.rep.googleapis.com
+    type: ICMP
+  - name: GCP-europe-west9
+    host: storage.europe-west9.rep.googleapis.com
+    type: ICMP
+  - name: GCP-europe-west10
+    host: storage.europe-west10.rep.googleapis.com
+    type: ICMP
+  - name: GCP-europe-west12
+    host: storage.europe-west12.rep.googleapis.com
+    type: ICMP
+  - name: GCP-europe-north1
+    host: storage.europe-north1.rep.googleapis.com
+    type: ICMP
+  - name: GCP-europe-southwest1
+    host: storage.europe-southwest1.rep.googleapis.com
+    type: ICMP
+  - name: GCP-europe-central2
+    host: storage.europe-central2.rep.googleapis.com
+    type: ICMP
