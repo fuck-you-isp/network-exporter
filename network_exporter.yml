@@ -123,7 +123,7 @@ targets:
     host: sin-speed.hetzner.com
     type: ICMP
 
-# AWS
+# AWS USA
   - name: AMZN-us-east-1
     host: s3.us-east-1.amazonaws.com
     type: ICMP
@@ -136,6 +136,7 @@ targets:
   - name: AMZN-us-west-2
     host: s3.us-west-2.amazonaws.com
     type: ICMP
+# AWS EU
   - name: AMZN-eu-central-1
     host: s3.eu-central-1.amazonaws.com
     type: ICMP
@@ -160,4 +161,6 @@ targets:
   - name: AMZN-eu-central-2
     host: s3.eu-central-2.amazonaws.com
     type: ICMP
+
+
 
