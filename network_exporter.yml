@@ -124,40 +124,40 @@ targets:
     type: ICMP
 
 # AWS
-  - name: AWS-us-east-1
+  - name: AMZN-us-east-1
     host: s3.us-east-1.amazonaws.com
     type: ICMP
-  - name: AWS-us-east-2
+  - name: AMZN-us-east-2
     host: s3.us-east-2.amazonaws.com
     type: ICMP
-  - name: AWS-us-west-1
+  - name: AMZN-us-west-1
     host: s3.us-west-1.amazonaws.com
     type: ICMP
-  - name: AWS-us-west-2
+  - name: AMZN-us-west-2
     host: s3.us-west-2.amazonaws.com
     type: ICMP
-  - name: AWS-eu-central-1
+  - name: AMZN-eu-central-1
     host: s3.eu-central-1.amazonaws.com
     type: ICMP
-  - name: AWS-eu-west-1
+  - name: AMZN-eu-west-1
     host: s3.eu-west-1.amazonaws.com
     type: ICMP
-  - name: AWS-eu-west-2
+  - name: AMZN-eu-west-2
     host: s3.eu-west-2.amazonaws.com
     type: ICMP
-  - name: AWS-eu-south-1
+  - name: AMZN-eu-south-1
     host: s3.eu-south-1.amazonaws.com
     type: ICMP
-  - name: AWS-eu-west-3
+  - name: AMZN-eu-west-3
     host: s3.eu-west-3.amazonaws.com
     type: ICMP
-  - name: AWS-eu-south-2
+  - name: AMZN-eu-south-2
     host: s3.eu-south-2.amazonaws.com
     type: ICMP
-  - name: AWS-eu-north-1
+  - name: AMZN-eu-north-1
     host: s3.eu-north-1.amazonaws.com
     type: ICMP
-  - name: AWS-eu-central-2
+  - name: AMZN-eu-central-2
     host: s3.eu-central-2.amazonaws.com
     type: ICMP
 
