@@ -15,7 +15,7 @@ mtr:
   count: 6
 
 tcp:
-  interval: s3
+  interval: 3s
   timeout: 1s
 
 http_get:
@@ -117,44 +117,194 @@ targets:
     host: sin-speed.hetzner.com
     type: ICMP
 
-# AWS USA
-  - name: AMZN-us-east-1
+# AWS US
+  - name: AWS-us-east-1
     host: s3.us-east-1.amazonaws.com
     type: ICMP
-  - name: AMZN-us-east-2
+  - name: AWS-us-east-2
     host: s3.us-east-2.amazonaws.com
     type: ICMP
-  - name: AMZN-us-west-1
+  - name: AWS-us-west-1
     host: s3.us-west-1.amazonaws.com
     type: ICMP
-  - name: AMZN-us-west-2
+  - name: AWS-us-west-2
     host: s3.us-west-2.amazonaws.com
     type: ICMP
-# AWS EU
-  - name: AMZN-eu-central-1
+# AWS Africa
+  - name: AWS-af-south-1
+    host: s3.af-south-1.amazonaws.com
+    type: ICMP
+# AWS Asia Pacific
+  - name: AWS-ap-east-1
+    host: s3.ap-east-1.amazonaws.com
+    type: ICMP
+  - name: AWS-ap-east-2
+    host: s3.ap-east-2.amazonaws.com
+    type: ICMP
+  - name: AWS-ap-south-1
+    host: s3.ap-south-1.amazonaws.com
+    type: ICMP
+  - name: AWS-ap-south-2
+    host: s3.ap-south-2.amazonaws.com
+    type: ICMP
+  - name: AWS-ap-southeast-1
+    host: s3.ap-southeast-1.amazonaws.com
+    type: ICMP
+  - name: AWS-ap-southeast-2
+    host: s3.ap-southeast-2.amazonaws.com
+    type: ICMP
+  - name: AWS-ap-southeast-3
+    host: s3.ap-southeast-3.amazonaws.com
+    type: ICMP
+  - name: AWS-ap-southeast-4
+    host: s3.ap-southeast-4.amazonaws.com
+    type: ICMP
+  - name: AWS-ap-southeast-5
+    host: s3.ap-southeast-5.amazonaws.com
+    type: ICMP
+  - name: AWS-ap-southeast-6
+    host: s3.ap-southeast-6.amazonaws.com
+    type: ICMP
+  - name: AWS-ap-southeast-7
+    host: s3.ap-southeast-7.amazonaws.com
+    type: ICMP
+  - name: AWS-ap-northeast-1
+    host: s3.ap-northeast-1.amazonaws.com
+    type: ICMP
+  - name: AWS-ap-northeast-2
+    host: s3.ap-northeast-2.amazonaws.com
+    type: ICMP
+  - name: AWS-ap-northeast-3
+    host: s3.ap-northeast-3.amazonaws.com
+    type: ICMP
+# AWS Canada
+  - name: AWS-ca-central-1
+    host: s3.ca-central-1.amazonaws.com
+    type: ICMP
+  - name: AWS-ca-west-1
+    host: s3.ca-west-1.amazonaws.com
+    type: ICMP
+# AWS Europe
+  - name: AWS-eu-central-1
     host: s3.eu-central-1.amazonaws.com
     type: ICMP
-  - name: AMZN-eu-west-1
-    host: s3.eu-west-1.amazonaws.com
-    type: ICMP
-  - name: AMZN-eu-west-2
-    host: s3.eu-west-2.amazonaws.com
-    type: ICMP
-  - name: AMZN-eu-south-1
-    host: s3.eu-south-1.amazonaws.com
-    type: ICMP
-  - name: AMZN-eu-west-3
-    host: s3.eu-west-3.amazonaws.com
-    type: ICMP
-  - name: AMZN-eu-south-2
-    host: s3.eu-south-2.amazonaws.com
-    type: ICMP
-  - name: AMZN-eu-north-1
-    host: s3.eu-north-1.amazonaws.com
-    type: ICMP
-  - name: AMZN-eu-central-2
+  - name: AWS-eu-central-2
     host: s3.eu-central-2.amazonaws.com
     type: ICMP
+  - name: AWS-eu-west-1
+    host: s3.eu-west-1.amazonaws.com
+    type: ICMP
+  - name: AWS-eu-west-2
+    host: s3.eu-west-2.amazonaws.com
+    type: ICMP
+  - name: AWS-eu-west-3
+    host: s3.eu-west-3.amazonaws.com
+    type: ICMP
+  - name: AWS-eu-north-1
+    host: s3.eu-north-1.amazonaws.com
+    type: ICMP
+  - name: AWS-eu-south-1
+    host: s3.eu-south-1.amazonaws.com
+    type: ICMP
+  - name: AWS-eu-south-2
+    host: s3.eu-south-2.amazonaws.com
+    type: ICMP
+# AWS Israel
+  - name: AWS-il-central-1
+    host: s3.il-central-1.amazonaws.com
+    type: ICMP
+# AWS Mexico
+  - name: AWS-mx-central-1
+    host: s3.mx-central-1.amazonaws.com
+    type: ICMP
+# AWS Middle East
+  - name: AWS-me-south-1
+    host: s3.me-south-1.amazonaws.com
+    type: ICMP
+  - name: AWS-me-central-1
+    host: s3.me-central-1.amazonaws.com
+    type: ICMP
+# AWS South America
+  - name: AWS-sa-east-1
+    host: s3.sa-east-1.amazonaws.com
+    type: ICMP
 
 
+ # Americas
+  - name: GCP-us-west1
+    host: storage.us-west1.rep.googleapis.com
+    type: ICMP
+  - name: GCP-us-west2
+    host: storage.us-west2.rep.googleapis.com
+    type: ICMP
+  - name: GCP-us-west3
+    host: storage.us-west3.rep.googleapis.com
+    type: ICMP
+  - name: GCP-us-west4
+    host: storage.us-west4.rep.googleapis.com
+    type: ICMP
+  - name: GCP-us-central1
+    host: storage.us-central1.rep.googleapis.com
+    type: ICMP
+  - name: GCP-us-east1
+    host: storage.us-east1.rep.googleapis.com
+    type: ICMP
+  - name: GCP-us-east4
+    host: storage.us-east4.rep.googleapis.com
+    type: ICMP
+  - name: GCP-us-east5
+    host: storage.us-east5.rep.googleapis.com
+    type: ICMP
+  - name: GCP-us-south1
+    host: storage.us-south1.rep.googleapis.com
+    type: ICMP
+  - name: GCP-northamerica-northeast1
+    host: storage.northamerica-northeast1.rep.googleapis.com
+    type: ICMP
+  - name: GCP-northamerica-northeast2
+    host: storage.northamerica-northeast2.rep.googleapis.com
+    type: ICMP
+  - name: GCP-southamerica-east1
+    host: storage.southamerica-east1.rep.googleapis.com
+    type: ICMP
+  - name: GCP-southamerica-west1
+    host: storage.southamerica-west1.rep.googleapis.com
+    type: ICMP
+  # Europe
+  - name: GCP-europe-west1
+    host: storage.europe-west1.rep.googleapis.com
+    type: ICMP
+  - name: GCP-europe-west2
+    host: storage.europe-west2.rep.googleapis.com
+    type: ICMP
+  - name: GCP-europe-west3
+    host: storage.europe-west3.rep.googleapis.com
+    type: ICMP
+  - name: GCP-europe-west4
+    host: storage.europe-west4.rep.googleapis.com
+    type: ICMP
+  - name: GCP-europe-west6
+    host: storage.europe-west6.rep.googleapis.com
+    type: ICMP
+  - name: GCP-europe-west8
+    host: storage.europe-west8.rep.googleapis.com
+    type: ICMP
+  - name: GCP-europe-west9
+    host: storage.europe-west9.rep.googleapis.com
+    type: ICMP
+  - name: GCP-europe-west10
+    host: storage.europe-west10.rep.googleapis.com
+    type: ICMP
+  - name: GCP-europe-west12
+    host: storage.europe-west12.rep.googleapis.com
+    type: ICMP
+  - name: GCP-europe-north1
+    host: storage.europe-north1.rep.googleapis.com
+    type: ICMP
+  - name: GCP-europe-southwest1
+    host: storage.europe-southwest1.rep.googleapis.com
+    type: ICMP
+  - name: GCP-europe-central2
+    host: storage.europe-central2.rep.googleapis.com
+    type: ICMP
 
