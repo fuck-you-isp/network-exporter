@@ -15,7 +15,7 @@ mtr:
   count: 6
 
 tcp:
-  interval: 3s
+  interval: s3
   timeout: 1s
 
 http_get:
@@ -29,12 +29,6 @@ targets:
     type: ICMP
   - name: Microsoft-Teams
     host: teams.microsoft.com
-    type: ICMP
-  - name: Slack-app
-    host: app.slack.com
-    type: ICMP
-  - name: Slack-api
-    host: edgeapi.slack.com
     type: ICMP
   - name: Discord
     host: discord.gg
